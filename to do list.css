@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+    background: linear-gradient(130deg,#000000a6,#fff);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+   
+}
+.display{
+    display: flex;
+}
+.todo-app{
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    background: #fff;
+    width: 100%;
+    max-width: 540px; 
+    box-shadow: 2px 2px 2px rgba(77, 75, 75); 
+}
+.top-left h2{
+    color: #002765;
+}
+.todo-app h2 img{
+    width: 20px;
+    margin-left: 10px;
+}
+.top{
+    display: flex;
+}
+.top-left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-around;
+    height:70px;
+}
+.top-right{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+}
+.user-img{
+    width: 130px;
+    height: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 150px;
+
+}
+#photo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 4px rgb(0,0,0,0.644);
+}
+#file{
+    display: none;
+}
+#uploadbtn{
+    position: absolute;
+    top: 37px;
+    left: 50px;
+    height: 20px;
+    width: 20px;
+    padding: 3px 4px;
+    font-size: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(173, 172, 172,0.801);
+    box-shadow: 2px 4px 4px rgb(0,0,0,0.644);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 2px rgba(77, 75, 75);
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+button:hover{
+    transform: scale(1.1);
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./To-Do-Img/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 15px;
+    top: 8px;
+}
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.checked::before{
+    background-image: url(./To-Do-Img/images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+
+}
+ul li span:hover{
+    background-color: #edeef0;border-radius: 50%;
+}
+.date{
+   font-size: 15px;
+   padding-left: 2px;
+}
+@media screen and (max-width:500px) {
+    input{
+        padding: 15px;
+    }
+    button{
+        padding: 15px 20px;
+        font-size: 13px;
+    }
+    .date{
+        left: 200px;
+    }
+}
